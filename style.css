@@ -1,0 +1,259 @@
+/* --------------------------
+Rachel Tomas
+Created: February 2015
+Edited: February 2015
+Written For: Portfolio Site
+
+Colors:
+--------
+3B3A35 = dark grey
+20457C = dark blue
+5E3448 = dark purple
+FB6648 = melon orange
+ECDFBD = sandy white
+---------------------------*/
+
+/* Universal
+------------*/
+/** {
+border: 1 dashed black;
+}*/
+body {
+background-color: #3B3A35;
+margin: 0;
+font-family: "Trebuchet MS", Helvetica, sans-serif;4
+}
+a {
+text-decoration: none;
+color: black;
+}
+
+/* Layout
+---------*/
+#container {
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+}
+#head {
+width: 900px;
+height: 150px;
+background-image: url("assets/images/header.png");
+}
+#nav {
+width: 900px;
+height: 35px;
+margin-top: 15px;
+}
+
+/* Navigation
+--------------*/
+.nav-item {
+height: 35px;
+width: 105px;
+display: inline-block;
+float: right;
+text-align: center;
+font-size: 14.5px;
+}
+.nav-item a {
+display: inline-block;
+height: 35px;
+width: 105px;
+background-color: #FB6648;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.nav-item a:hover {
+background-color: #993E2C;
+}
+
+/* Portal Layout
+----------------*/
+#p-content {
+width: 900px;
+}
+.row {
+width: 900px;
+height: 210px;
+}
+
+/* Portal Links
+---------*/
+.option {
+width: 180px;
+height: 180px;
+border-radius: 100%;
+margin-left: 57px;
+margin-right: 57px;
+margin-top: 10px;
+margin-bottom: 10px;
+display: inline-block;
+vertical-align: middle;
+line-height: 180px;
+}
+.option img {
+max-height: 80px;
+max-width: 90px;
+display: block;
+}
+.option a {
+width: 180px;
+height: 180px;
+border-radius: 100%;
+background-color: #FB6648;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Image Slider
+demosthenes.info/blog/627/Make-A-Responsive-CSS3-Image-Slider
+Example:
+5 images = 0{0}, 20{0}, 25{-100}, 45{-100}, 50{-200}, 70{-200}, 75{-300}, 95{-300}, 100{-400}
+Each image appears for 20%, and moves to the left 100% for 5%, of the total time 30s
+General:
+Each image appears for  DA%, and moves to the left 100% for DB%, of the total time T
+100 = DAX + DBX
+X = # of images - 1
+DA = [100-(DBX)]/X
+DB = 5
+T = 7.5X
+Other:
+figure width = 100% times the number of images
+image width = 100% divided by the number of images
+------------------------------------------------------------------------------------------------*/
+/* General */
+#slider {
+width: 900px;
+overflow: hidden;
+}
+#slider figure {
+position: relative;
+margin: 0;
+padding: 0;
+font-size: 0;
+text-align: left;
+}
+#slider figure img {
+height: auto;
+float: left;
+}
+/* 4 Images */
+.slider4 figure {
+width: 400%;
+-webkit-animation: 23s slidy4 infinite;
+animation: 23s slidy4 infinite;
+}
+.slider4 figure img {
+width: 25%
+}
+@keyframes slidy4 {
+/* Image 1 */
+0% {left: 0%;}
+28% {left : 0%;}
+/* Image 2 */
+33% {left: -100%;}
+61% {left: -100%;}
+/* Image 3 */
+66% {left: -200%;}
+94% {left: -200%;}
+/* Image 4 (1 again) */
+100% {left: -300%}
+}
+@-webkit-keyframes slidy4 {
+/* Image 1 */
+0% {left: 0%;}
+28% {left : 0%;}
+/* Image 2 */
+33% {left: -100%;}
+61% {left: -100%;}
+/* Image 3 */
+66% {left: -200%;}
+94% {left: -200%;}
+/* Image 4 (1 again) */
+100% {left: -300%}
+}
+
+/* Overall Project Pages
+--------------------------*/
+.projectBox {
+background-color: #ECDFBD;
+display: inline-block;
+width: 375px; /* 250px */
+height: 250px; /* 200px */
+margin: 23px;
+}
+.projectBox img {
+max-width: 345px; /* 220px */
+max-height: 170px; /* 130px */
+}
+.projectBox a {
+display: inline-block;
+width: 345px;
+height: 220px;
+margin: 15px;
+}
+.projectBox p {
+margin-left: 20px;
+}
+
+/* Individual Project Pages
+---------------------------*/
+.project-nav {
+border-radius: 100%;
+float: left;
+display: inline-block;
+width: 80px;
+height: 80px;
+}
+.project-nav a {
+display: inline-block;
+width: 80px;
+height: 80px;
+border-radius: 100%;
+}
+#project-back {
+background-color: #FB6648;
+background-image: url("assets/images/icons/left-arrow.png");
+background-position: center;
+background-size: 50px 50px;
+background-repeat: no-repeat;
+}
+#project-next {
+background-color: #FB6648;
+background-image: url("assets/images/icons/right-arrow.png");
+background-position: center;
+background-size: 50px 50px;
+background-repeat: no-repeat;
+}
+#project {
+width: 900px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: auto;
+padding-top: 30px;
+padding-bottom: 20px;
+}
+#project-head {
+width: 700px;
+height: auto;
+padding-left: 10px;
+padding-right: 10px;
+}
+#content {
+width: 874px;
+height: auto;
+background-color: #ECDFBD;
+margin: 5px;
+padding: 8px;
+}
+#content h1 {
+margin-bottom: -8px;
+}
+#content h2 {
+color: #A3A3A3;
+font-size: 12px;
+}
