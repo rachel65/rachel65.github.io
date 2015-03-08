@@ -9,24 +9,24 @@
 <div id="container">
 
 	<div id="nav">
-		<script type="text/javascript" src"#""></script>
+		<script type="text/javascript" src="../../csi/nav.js"></script>
 	</div>
 
 	<div id="head"></div>
 	
 	<div id="project">
 		<div class="project-nav" id="project-back">
-			<a href="#" title="Previous Project"></a>
+			<a href="ad.html" title="Previous Project"></a>
 		</div>
 		<div id="project-head">
-			<object style="width: #; height: #;">
-				<param name="movie" value="#" />
+			<object style="width: 300px; height: 400px;">
+				<param name="movie" value="../../assets/animations/ecard.swf" />
 				<param name="quality" value="high" />
 				<param name="play" value="true" />
 				<param name="loop" value="true" />
 				<!--[if !IE]>-->
-				<object style="width: 700px; height: 125px;" data="#" type="application/x-shockwave-flash">
-					<param name="movie" value="#" />
+				<object style="width: 300px; height: 400px;" data="../../assets/animations/ecard.swf" type="application/x-shockwave-flash">
+					<param name="movie" value="../../assets/animations/ecard.swf" />
 					<param name="quality" value="high" />
 					<param name="play" value="true" />
 					<param name="loop" value="true" />
@@ -35,16 +35,70 @@
 			</object>
 		</div>
 		<div class="project-nav" id="project-next">
-			<a href="#" title="Next Project"></a>
+			<a href="../../flash.html" title="Next Project"></a>
 		</div>
 	</div>
 	
 	<div id="content">
-		<h1></h1>
-		<h2>Created: </h2>
+		<h1>Arbor Day E-Card</h1>
+		<h2>Created: February 17, 2015</h2><hr/>
+		<div id="Finstruct">
+			<p>
+				This interactive, electronic Arbor Day card was created in the course Web Design 2 following the guide pictured on the right. Similar to other electronic, and print cards, after an initial opening scene the reader is prompted to essentially "open" the card. This is done by clicking on the text which continues the reader to the end of the animation.
+			</p>
+			<a href="#img1" title="Click for Larger View">
+				<img src="../../assets/images/flash/ecard/instructions.png" alt="Instructions"/>
+			</a>
+		</div>
+		<div id="Fconstruct">
+			<p>
+				Flash techniques used include:
+				<dl>
+					<dt>Deco tool</dt>
+					<dd>Used to simulate the water pouring from both the can and the cloud by using a single image of a water droplet, repeatedly animated</dd>
+					<dt>Motion tweening</dt>
+					<dd>Used for the moving of the plant, watering can, cloud, etc.</dd>
+					<dt>Multiple scenes</dt>
+					<dd>One scene being the outside of the card and the other the inside, this allows for the "opening" of the card</dd>
+					<dt>Shape tweening</dt>
+					<dd>The initial plant growth from the pot uses this method</dd>
+				</dl>
+			</p>
+			<a href="#img2" title="Click for Larger View">
+				<img src="../../assets/images/flash/ecard/timeline1.png" alt="Scene One Timeline"/>
+			</a>
+			<a href="#img3" title="Click for Larger View">
+				<img src="../../assets/images/flash/ecard/timeline2.png" alt="Scene Two Timeline"/>
+			</a>
+		</div>
+		<div id="Fextra">
+			<p>
+				ActionScript is used in this project to activate the button as well as stop the animation from looping.
+			</p>
+			<a href="#img4" title="Click for Larger View">
+				<img src="../../assets/images/flash/ecard/actionscript.png" alt="ActionScript"/>
+			</a>
+			<p>
+				The code states that when the event of a mouse click occurs on the button that was created in the scene, the animation should skip to scene two. After it has finished playing, the animation then terminates and therefore does not loop.
+			</p>
+		</div>
 	</div>
 	
 </div>
+
+<!-- Lightboxes -->
+<a href="#" class="lightbox" id="img1">
+	<img src="../../assets/images/flash/ecard/instructions.png" alt="Instructions"/>
+</a>
+<a href="#" class="lightbox" id="img2">
+	<img src="../../assets/images/flash/ecard/timeline1.png" alt ="Scene One Timeline"/>
+</a>
+<a href="#" class="lightbox" id="img3">
+	<img src="../../assets/images/flash/ecard/timeline2.png" alt ="Scene Two Timeline"/>
+</a>
+<a href="#" class="lightbox" id="img4">
+	<img src="../../assets/images/flash/ecard/actionscript.png" alt ="ActionScript"/>
+</a>
 
 </body>
 </html>

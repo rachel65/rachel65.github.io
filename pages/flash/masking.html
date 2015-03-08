@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Portfolio|Masking</title>
+<title>Portfolio|Gopher</title>
 <!--<meta http-equiv="refresh" content="1">-->
 <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
@@ -9,24 +9,24 @@
 <div id="container">
 
 	<div id="nav">
-		<script type="text/javascript" src"#""></script>
+		<script type="text/javascript" src="../../csi/nav.js"></script>
 	</div>
 
 	<div id="head"></div>
 	
 	<div id="project">
 		<div class="project-nav" id="project-back">
-			<a href="#" title="Previous Project"></a>
+			<a href="../../flash.html" title="Previous Project"></a>
 		</div>
 		<div id="project-head">
-			<object style="width: #; height: #;">
-				<param name="movie" value="#" />
+			<object style="width: 550px; height: 400px;">
+				<param name="movie" value="../../assets/animations/masking.swf" />
 				<param name="quality" value="high" />
 				<param name="play" value="true" />
 				<param name="loop" value="true" />
 				<!--[if !IE]>-->
-				<object style="width: 700px; height: 125px;" data="#" type="application/x-shockwave-flash">
-					<param name="movie" value="#" />
+				<object style="width: 550px; height: 400px;" data="../../assets/animations/masking.swf" type="application/x-shockwave-flash">
+					<param name="movie" value="../../assets/animations/masking.swf" />
 					<param name="quality" value="high" />
 					<param name="play" value="true" />
 					<param name="loop" value="true" />
@@ -35,16 +35,33 @@
 			</object>
 		</div>
 		<div class="project-nav" id="project-next">
-			<a href="#" title="Next Project"></a>
+			<a href="psa.html" title="Next Project"></a>
 		</div>
 	</div>
 	
 	<div id="content">
-		<h1></h1>
-		<h2>Created: </h2>
+		<h1>Gopher Masking Tutorial</h1>
+		<h2>Created: January 16, 2015</h2><hr/>
+		<div id="Finstruct">
+			<p>
+				This simple masking example of a gopher was created in the course Web Design 2, following <a href="https://www.youtube.com/watch?v=1d_8UMtlKxY" target="_blank" style="text-decoration: underline; color: blue;">this video tutorial</a> by YouTube user John McMullen. Through the use of a mask, the illusion of the gopher emerging from the "hole" in the ground and then descending back down is created. The real science behind it is selecting a specific portion of the stage, and only allowing the image to show up in that region. In this example, that specific area is the space above the black oval, as pictured in the image on the right, and the image is the gopher.
+			</p>
+			<img src="../../assets/images/flash/masking/instructions.png" alt="Explanation"/>
+		</div>
+		<div id="Fconstruct">
+			<br/>
+			<a href="#img1" title="Click for Larger View">
+				<img src="../../assets/images/flash/masking/timeline.png" alt="Timeline"/>
+			</a>
+		</div>
 	</div>
 	
 </div>
+
+<!-- Lightboxes -->
+<a href="#" class="lightbox" id="img1">
+	<img src="../../assets/images/flash/masking/timeline.png" alt="Timeline"/>
+</a>
 
 </body>
 </html>
