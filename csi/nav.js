@@ -10,17 +10,17 @@ rootFolder = loc.substr(0, idx);
 
 document.write(
 '<div class="nav-item">' +
-	'<a href="' + rootFolder + '/otherSites.html" title="Other Sites">' +
+	'<a href="#" title="Other Sites">' +
 		'SITES' +
 	'</a>' +
 '</div>' +
 '<div class="nav-item">' +
-	'<a href="' + rootFolder + '/mitApp.html" title="MIT App Inventor">' +
+	'<a href="#" title="MIT App Inventor">' +
 		'MIT APPS' +
 	'</a>' +
 '</div>' +
 '<div class="nav-item">' +
-	'<a href="' + rootFolder + '/aboutMe.html" title="About">' +
+	'<a href="#" title="About">' +
 		'ABOUT' +
 	'</a>' +
 '</div>' +
