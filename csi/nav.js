@@ -15,7 +15,7 @@ document.write(
 	'</a>' +
 '</div>' +
 '<div class="nav-item">' +
-	'<a href="#" title="MIT App Inventor">' +
+	'<a href="' + rootFolder + '/mitApp.html" title="MIT App Inventor">' +
 		'MIT APPS' +
 	'</a>' +
 '</div>' +

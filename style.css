@@ -371,6 +371,11 @@ margin-bottom: 20px;
 background-color: #CDCDCD;
 padding-left: 0px;
 }
+#Mconstruct img{
+margin-left: 5px;
+margin-right: 5px;
+max-width: 95%;
+}
 #Fextra {
 display: inline-block;
 width: 100%;
