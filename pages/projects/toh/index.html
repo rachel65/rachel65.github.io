@@ -1,0 +1,56 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+
+<div id="game-box">
+	
+	<!-- Visible tower poles -->
+	<div id="inner-game-box">
+		<figure class="column" id="column1"></figure>
+		<figure class="column" id="column2"></figure>
+		<figure class="column" id="column3"></figure>
+	</div>
+	
+	<!-- Drop areas for disks -->
+	<div class="sel" id="sel1">
+	</div>
+	<div class="sel" id="sel2">
+	</div>
+	<div class="sel" id="sel3">
+	</div>
+	
+	<!-- Groups discs are added to -->
+	<div class="tower" id="tower1">1
+	</div>
+	<div class="tower" id="tower2">2
+	</div>
+	<div class="tower" id="tower3">3
+	</div>
+	
+	<figure id="board"></figure>
+	
+</div>
+
+<div id="numDiscsBlock">
+<h2>Number of Disks</h2>
+<p id="numDiscs"></p>
+<div id="discsButtons">
+<button onClick="defineGrid(discTotal-1)">&lt</button>
+<button onClick="defineGrid(discTotal+1)">&gt</button>
+</div>
+</div>
+
+<div id="moveCountBlock">
+<h2>Number of Moves</h2>
+<p id="moveCount"></p>
+</div>
+
+</body>
+</html>

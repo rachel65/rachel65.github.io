@@ -10,8 +10,8 @@ rootFolder = loc.substr(0, idx);
 
 document.write(
 '<div class="nav-item">' +
-	'<a href="#" title="Other Sites">' +
-		'SITES' +
+	'<a href="' + rootFolder + '/other.html" title="Other Projects">' +
+		'OTHER' +
 	'</a>' +
 '</div>' +
 '<div class="nav-item">' +

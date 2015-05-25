@@ -1,0 +1,351 @@
+<html>
+<head>
+<title>Portfolio|Towers of Hanoi</title>
+<!--<meta http-equiv="refresh" content="1">-->
+<link rel="stylesheet" type="text/css" href="../../../style.css">
+</head>
+<body>
+
+<div id="container">
+
+	<div id="nav">
+		<script type="text/javascript" src="../../../csi/nav.js"></script>
+	</div>
+
+	<div id="head"></div>
+	
+	<div id="project">
+		<iframe src="index.html" style="border: none; margin: 0; padding: 0; width: 900px; height: 580px" scrolling="no"></iframe>
+	</div>
+	
+	<div id="content">
+		<h1>JavaScript Towers of Hanoi Game</h1>
+		<h2>Created: May 18, 2015</h2><hr/>
+		<div id="Finstruct">
+			<p>
+				This interactive game was created in the courses Web Design 2 and Mobile Applications using JavaScript, HTML, and CSS. The objective of the game is to move the disks one at a time onto the other pegs in a way that constructs the tower entirely on any peg other than the first one. The only rule is that larger disks cannot go on top of smaller ones. There are levels of varying 'difficulty' available according to the number of disks added to the board. The challenge is to complete the new tower in as few moves as possible.
+			</p>
+		</div>
+		<div id="Fconstruct">
+			<p>
+				The JavaScript code begins by identifying the number of disks needed on the game board and loops through to construct them on the first peg. Play then begins using JQuery UI Plug-in's Draggable and Droppable in order to allow the game pieces to be moved. Movement is restricted to the game box and only the first disks in each column are given the ability to be dragged. There are droppable zones in which the disks can be placed and each time the player attempts to release a dragged piece, it checks to ensure the piece is not larger than the first one on that peg. Each turn, a move is added to the total move counter and when all disks are placed on either the middle or right peg, the player wins.
+			</p>
+		</div>
+		<div id="Dconstruct">
+			<strong>&nbsp;&nbsp;&nbsp;JavaScript</strong>
+			<pre>
+var discTotal = 3;
+var dragOptions = {
+	containment: "#inner-game-box",
+	start: function(){
+		$(this).css("z-index", 400)
+	},
+	stop: function(){
+		$(this).css("z-index", 200)
+	}
+};
+var moveCount = 0;
+
+function defineGrid(d) {
+	discTotal = d;
+	if (discTotal == 2) {
+		discTotal++;
+	} else if (discTotal == 9){
+		discTotal--;
+	} else {
+		$('#tower1').html('');
+		$('#tower2').html('');
+		$('#tower3').html('');
+		for (var i = d; i > 0; i--) {
+			drawDisc(1, i)
+		};
+		$('#disc1').draggable(dragOptions)
+	};
+	moveCount = 0;
+	updateScore(moveCount++);
+	$('#numDiscs').html(discTotal)
+};
+
+function drawDisc(tower, num) {
+	$('#tower' + tower).prepend('&ltfigure class="disc" id="disc' + num + '">' + num + '&lt/figure>')
+};
+
+function makeDrag() {
+	$('#tower1').find('.disc').draggable("destroy");
+	$('#tower2').find('.disc').draggable("destroy");
+	$('#tower3').find('.disc').draggable("destroy");
+	$('#tower1').find('>:first-child').draggable(dragOptions);
+	$('#tower2').find('>:first-child').draggable(dragOptions);
+	$('#tower3').find('>:first-child').draggable(dragOptions)
+};
+
+function updateScore(score) {
+	$('#moveCount').html(score);
+	if(($('#tower1').find('>:first-child').text() == 0) && (($('#tower2').find('>:first-child').text() == 0) ||
+		($('#tower3').find('>:first-child').text() == 0))) {
+		$('#game-box').append('&ltdiv id="win">Congratulations! You won in ' + score + ' moves!&lt/div>')
+	}
+};
+
+$(document).ready(function(){
+	$('#sel1').droppable({
+		drop: function( event, ui ) {
+			var temp = ui.draggable;
+			var tempO = $('#tower1').find('>:first-child').text();
+			if ((tempO > temp.text()) || (tempO == 0)) {
+				drawDisc(1, temp.text());
+				temp.remove();
+				makeDrag();
+				updateScore(moveCount++);
+			} else {
+				$(ui.draggable).draggable({
+					revert: true
+				})
+			}
+		}
+	});
+	$('#sel2').droppable({
+		drop: function( event, ui ) {
+			var temp = ui.draggable;
+			var tempO = $('#tower2').find('>:first-child').text();
+			if ((tempO > temp.text()) || (tempO == 0)) {
+				drawDisc(2, temp.text());
+				temp.remove();
+				makeDrag();
+				updateScore(moveCount++);
+			} else {
+				$(ui.draggable).draggable({
+					revert: true
+				})
+			}
+		}
+	});
+	$('#sel3').droppable({
+		drop: function( event, ui ) {
+			var temp = ui.draggable;
+			var tempO = $('#tower3').find('>:first-child').text();
+			if ((tempO > temp.text()) || (tempO == 0)) {
+				drawDisc(3, temp.text());
+				temp.remove();
+				makeDrag();
+				updateScore(moveCount++);
+			} else {
+				$(ui.draggable).draggable({
+					revert: true
+				})
+			}
+		}
+	});
+	defineGrid(discTotal);
+})
+			</pre>
+			<strong>&nbsp;&nbsp;&nbsp;HTML</strong>
+			<pre>
+&ltdiv id="game-box">
+	
+	&lt!-- Visible tower poles -->
+	&ltdiv id="inner-game-box">
+		&ltfigure class="column" id="column1">&lt/figure>
+		&ltfigure class="column" id="column2">&lt/figure>
+		&ltfigure class="column" id="column3">&lt/figure>
+	&lt/div>
+	
+	&lt!-- Drop areas for disks -->
+	&ltdiv class="sel" id="sel1">
+	&lt/div>
+	&ltdiv class="sel" id="sel2">
+	&lt/div>
+	&ltdiv class="sel" id="sel3">
+	&lt/div>
+	
+	&lt!-- Groups discs are added to -->
+	&ltdiv class="tower" id="tower1">1
+	&lt/div>
+	&ltdiv class="tower" id="tower2">2
+	&lt/div>
+	&ltdiv class="tower" id="tower3">3
+	&lt/div>
+	
+	&ltfigure id="board">&lt/figure>
+	
+&lt/div>
+
+&ltdiv id="numDiscsBlock">
+&lth2>Number of Disks&lt/h2>
+&ltp id="numDiscs">&lt/p>
+&ltdiv id="discsButtons">
+&ltbutton onClick="defineGrid(discTotal-1)">&lt&lt/button>
+&ltbutton onClick="defineGrid(discTotal+1)">&gt&lt/button>
+&lt/div>
+&lt/div>
+
+&ltdiv id="moveCountBlock">
+&lth2>Number of Moves&lt/h2>
+&ltp id="moveCount">&lt/p>
+&lt/div>
+			</pre>
+			<strong>&nbsp;&nbsp;&nbsp;CSS</strong>
+			<pre>
+#game-box {
+position: relative;
+width: 900px;
+height: 450px;
+margin: auto;
+}
+#inner-game-box {
+margin: 0;
+width: 900px;
+height: 400px;
+position: absolute;
+bottom: 20;
+}
+.column {
+background-color: #C7C7C7;
+width: 20px;
+height: 400px;
+position: absolute;
+margin: 0;
+}
+.tower {
+margin: 0;
+width: 300px;
+height: auto;
+position: absolute;
+bottom: 20;
+}
+.sel {
+margin: 0;
+width: 300px;
+height: 400px;
+position: absolute;
+bottom: 20;
+}
+#column1 {
+left: 140;
+}
+#tower1 {
+left: 0;
+}
+#sel1 {
+left: 0;
+}
+#column2 {
+left: 440;
+}
+#tower2 {
+left: 300;
+}
+#sel2 {
+left: 300;
+}
+#column3 {
+right: 140;
+}
+#tower3 {
+right: 0;
+}
+#sel3 {
+right: 0;
+}
+#board {
+background-color: #C7C7C7;
+width: 900px;
+height: 20px;
+margin: 0;
+position: absolute;
+bottom: 0;
+}
+.disc {
+height: 38px;
+margin: auto;
+border: 1px solid black;
+border-radius: 8px;
+text-indent: 100%;
+overflow: hidden;
+}
+#disc1 {
+width: 55px;
+background-color: #BE29BB;
+}
+#disc2 {
+width: 90px;
+background-color: #79CAC3;
+}
+#disc3 {
+width: 125px;
+background-color: #FFFAC6;
+}
+#disc4 {
+width: 160px;
+background-color: #8AC441;
+}
+#disc5 {
+width: 195px;
+background-color: #ED2E7A;
+}
+#disc6 {
+width: 230px;
+background-color: #C99DC7;
+}
+#disc7 {
+width: 265px;
+background-color: #2A97C8;
+}
+#disc8 {
+width: 300px;
+background-color: #FFD542;
+}
+#win {
+width: 900px;
+height: auto;
+margin: auto;
+text-align: center;
+color: #FB6648;
+z-index: 300;
+font-size: 20px;
+}
+h2 {
+color: #B6BC20; 
+}
+#numDiscs {
+color: #B6BC20;
+position: relative;
+float: left;
+}
+#discsButtons {
+position: relative;
+float: right;
+}
+#moveCount {
+color: #B6BC20;
+}
+#numDiscsBlock {
+position: relative;
+float: left;
+}
+#moveCountBlock {
+position: relative;
+float: right;
+}
+			</pre>
+		</div>
+	</div>
+	
+</div>
+
+<!-- Lightboxes -->
+<a href="#" class="lightbox" id="img1">
+	<img src="../../assets/images/flash/ecard/instructions.png" alt="Instructions"/>
+</a>
+<a href="#" class="lightbox" id="img2">
+	<img src="../../assets/images/flash/ecard/timeline1.png" alt ="Scene One Timeline"/>
+</a>
+<a href="#" class="lightbox" id="img3">
+	<img src="../../assets/images/flash/ecard/timeline2.png" alt ="Scene Two Timeline"/>
+</a>
+<a href="#" class="lightbox" id="img4">
+	<img src="../../assets/images/flash/ecard/actionscript.png" alt ="ActionScript"/>
+</a>
+
+</body>
+</html>

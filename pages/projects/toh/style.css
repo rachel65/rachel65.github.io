@@ -1,0 +1,141 @@
+#game-box {
+position: relative;
+width: 900px;
+height: 450px;
+margin: auto;
+}
+#inner-game-box {
+margin: 0;
+width: 900px;
+height: 400px;
+position: absolute;
+bottom: 20;
+}
+.column {
+background-color: #C7C7C7;
+width: 20px;
+height: 400px;
+position: absolute;
+margin: 0;
+}
+.tower {
+margin: 0;
+width: 300px;
+height: auto;
+position: absolute;
+bottom: 20;
+}
+.sel {
+margin: 0;
+width: 300px;
+height: 400px;
+position: absolute;
+bottom: 20;
+}
+#column1 {
+left: 140;
+}
+#tower1 {
+left: 0;
+}
+#sel1 {
+left: 0;
+}
+#column2 {
+left: 440;
+}
+#tower2 {
+left: 300;
+}
+#sel2 {
+left: 300;
+}
+#column3 {
+right: 140;
+}
+#tower3 {
+right: 0;
+}
+#sel3 {
+right: 0;
+}
+#board {
+background-color: #C7C7C7;
+width: 900px;
+height: 20px;
+margin: 0;
+position: absolute;
+bottom: 0;
+}
+.disc {
+height: 38px;
+margin: auto;
+border: 1px solid black;
+border-radius: 8px;
+text-indent: 100%;
+overflow: hidden;
+}
+#disc1 {
+width: 55px;
+background-color: #BE29BB;
+}
+#disc2 {
+width: 90px;
+background-color: #79CAC3;
+}
+#disc3 {
+width: 125px;
+background-color: #FFFAC6;
+}
+#disc4 {
+width: 160px;
+background-color: #8AC441;
+}
+#disc5 {
+width: 195px;
+background-color: #ED2E7A;
+}
+#disc6 {
+width: 230px;
+background-color: #C99DC7;
+}
+#disc7 {
+width: 265px;
+background-color: #2A97C8;
+}
+#disc8 {
+width: 300px;
+background-color: #FFD542;
+}
+#win {
+width: 900px;
+height: auto;
+margin: auto;
+text-align: center;
+color: #FB6648;
+z-index: 300;
+font-size: 20px;
+}
+h2 {
+color: #B6BC20; 
+}
+#numDiscs {
+color: #B6BC20;
+position: relative;
+float: left;
+}
+#discsButtons {
+position: relative;
+float: right;
+}
+#moveCount {
+color: #B6BC20;
+}
+#numDiscsBlock {
+position: relative;
+float: left;
+}
+#moveCountBlock {
+position: relative;
+float: right;
+}
