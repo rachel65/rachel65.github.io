@@ -1,0 +1,184 @@
+/* 
+2/15/14
+2/17/14
+*/
+body {
+background-color: rgb(72,14,11);
+font-family: Georgia, serif;
+}
+h1 {
+text-align: center;
+font-family: "Century Gothic", sans-serif;
+font-size: 100px;
+}
+h2 {
+font-family: "Franklin Gothic Medium", sans-serif;
+font-size: 30px;
+padding-left: 150px;
+}
+h4 {
+text-align: right;
+padding-right: 1px;
+font-family: "Century Gothic", sans-serif;
+}
+h4 img {
+width: 60px;
+vertical-align: text-top;
+}
+a:link {
+text-decoration: none;
+color: black;
+}
+a:active {
+text-decoration: none;
+color: black;
+}
+a:visited {
+text-decoration: none;
+color: black;
+}
+a:hover {
+text-decoration: none;
+color: black;
+}
+#navbar {
+margin: 0 auto;
+width: 100%;
+text-align: center;
+}
+#page {
+background-color: white;
+width: 900px;
+margin: 0 auto;
+border: 10px groove rgb(93,42,39);
+}
+#heading {
+width: 100%;
+background-image: url('Images/fullsetextended.jpg');
+display: inline-block;
+background-repeat: no-repeat;
+background-position: center;
+padding-bottom: 0px;
+}
+#picturegrid {
+padding: 8px;
+}
+#picturegrid table {
+margin: 0 auto;
+width: 608px;
+border: 1px solid black;
+}
+#picturegrid table td {
+border: 1px solid black;
+}
+#picturegrid img {
+padding: 1px;
+width: 200px;
+height: 200px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+#prices td{
+border: 1px solid black;
+}
+#colors img {
+width: 30px;
+}
+#info {
+padding-right: 5px;
+float: right;
+}
+#main {
+float: left;
+}
+#pricemain {
+font-family: calibri;
+width: 100%;
+padding-bottom: 10px;
+}
+#pricemain table {
+border-collapse: collapse;
+margin: 0 auto;
+}
+#pricemain td {
+border: 1px solid;
+border-color: rgb(212,212,212);
+}
+#summary {
+text-indent: 50px;
+font-size: 14px;
+width: 50%;
+float: left;
+padding-left: 20px;
+}
+#imagemain {
+width: 100%;
+margin: 0 auto;
+}
+#imagemain img{
+padding: 10px;
+padding-top: 0px;
+width: 400px;
+}
+#attention {
+color: red;
+font-size: 30px;
+text-align: center;
+text-decoration: underline;
+}
+#acontent {
+padding: 50px;
+padding-top: 10px;
+}
+#updates {
+color: red;
+text-decoration: underline;
+}
+.indent {
+text-indent: 50px;
+}
+.spacing td {
+padding-right: 10px;
+}
+.greyed {
+color: grey;
+}
+.right {
+text-align: right;
+}
+.center {
+text-align: center;
+}
+.left {
+text-align: left;
+}
+.bold{
+font-weight: bold;
+}
+.italic {
+font-style: italic;
+font-size: 11px;
+}
+.bottomthick {
+border-bottom: 3px solid rgb(167,191,222);
+}
+.bottomdouble {
+border-bottom: double rgb(73,129,189);
+}
+.unbold {
+font-weight: normal;
+}
+.black {
+color: black;
+}
+.blue {
+color: rgb(31,73,170);
+}
+.total {
+background-color: rgb(184,204,228);
+}
+.quote {
+text-align: right;
+padding-right: 100px;
+}
