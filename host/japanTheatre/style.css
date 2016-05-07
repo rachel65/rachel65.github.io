@@ -14,16 +14,28 @@ font-size: 100px;
 h2 {
 font-family: "Franklin Gothic Medium", sans-serif;
 font-size: 30px;
-padding-left: 150px;
+position: float;
+margin: 0 auto;
+margin-bottom: 10px;
+padding: 0;
+text-align: center;
 }
 h4 {
-text-align: right;
-padding-right: 1px;
+text-align: center;
+margin: 0 auto;
+padding-right: 20px;
 font-family: "Century Gothic", sans-serif;
 }
 h4 img {
 width: 60px;
 vertical-align: text-top;
+}
+p {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Century Gothic", sans-serif;
+	list-style:disc outside none;
+    display:list-item; 
 }
 a:link {
 text-decoration: none;
@@ -54,36 +66,25 @@ border: 10px groove rgb(93,42,39);
 }
 #heading {
 width: 100%;
-background-image: url('Images/fullsetextended.jpg');
+background: url('Images/faces.jpg');
 display: inline-block;
 background-repeat: no-repeat;
 background-position: center;
 padding-bottom: 0px;
 }
-#picturegrid {
-padding: 8px;
+#right {
+	float: right;
+	width: 360px;
+	margin-right: 5px;
 }
-#picturegrid table {
-margin: 0 auto;
-width: 608px;
-border: 1px solid black;
+#left {
+	float: left;
+	width: 360px;
+	margin-left: 25px;
 }
-#picturegrid table td {
-border: 1px solid black;
-}
-#picturegrid img {
-padding: 1px;
-width: 200px;
-height: 200px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-#prices td{
-border: 1px solid black;
-}
-#colors img {
-width: 30px;
+#left2 {
+	float: left;
+	margin-left: 15px;
 }
 #info {
 padding-right: 5px;
@@ -121,19 +122,9 @@ padding: 10px;
 padding-top: 0px;
 width: 400px;
 }
-#attention {
-color: red;
-font-size: 30px;
-text-align: center;
-text-decoration: underline;
-}
 #acontent {
 padding: 50px;
 padding-top: 10px;
-}
-#updates {
-color: red;
-text-decoration: underline;
 }
 .indent {
 text-indent: 50px;
